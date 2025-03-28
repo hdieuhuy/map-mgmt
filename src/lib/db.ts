@@ -8,7 +8,7 @@ async function connectDB() {
   }
 
   try {
-    await mongoose.connect(MONGODB_URI);
+    await mongoose.connect(MONGODB_URI || "");
     console.log("Kết nối MongoDB thành công");
   } catch (error) {
     console.error("Lỗi kết nối MongoDB:", error);

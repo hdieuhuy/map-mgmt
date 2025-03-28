@@ -37,7 +37,7 @@ export default function RegisterForm() {
       // Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
       router.push("/login");
     } else {
-      setError(result.error);
+      setError(result.error || "");
     }
   };
 

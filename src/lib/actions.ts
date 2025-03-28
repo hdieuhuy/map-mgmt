@@ -26,7 +26,8 @@ export async function registerUser(formData: FormData) {
     });
     return { success: true, message: "Đăng ký thành công" };
   } catch (error) {
-    return { success: false, error: error.message };
+    console.log(error);
+    return { success: false };
   }
 }
 
