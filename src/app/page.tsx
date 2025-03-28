@@ -1,8 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
-
 import Map from "@/assets/map2.jpg";
 import Image from "next/image";
 

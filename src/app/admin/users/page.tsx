@@ -27,6 +27,7 @@ export default function UserManagementDashboard() {
       setTotalPages(result.totalPages);
       setLoading(false);
     } catch (err) {
+      console.log(err);
       setError("Không thể tải danh sách người dùng");
       setLoading(false);
     }

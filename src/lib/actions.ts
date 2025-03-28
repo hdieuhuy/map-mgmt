@@ -20,7 +20,7 @@ export async function registerUser(formData: FormData) {
   const hashedPassword = await bcrypt.hash(password as string, 10);
 
   try {
-    const user = await User.create({
+    await User.create({
       username,
       password: hashedPassword,
     });
