@@ -20,10 +20,10 @@ export default function LoginForm() {
 
     const result = await loginUser(formData);
 
-    if (result.success) {
+    if (result && result.success && result.user) {
       router.push(result.user.role === "admin" ? "/admin/users" : "/");
     } else {
-      setError(result.error);
+      setError(result.error || "");
     }
   };
 
