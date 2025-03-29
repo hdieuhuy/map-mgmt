@@ -33,10 +33,6 @@ export default function HomePage() {
           <Image id="map-image" src={Map} alt="Bản đồ địa phương" />
         </div>
       </div>
-
-      <div className="text-center text-sm text-gray-500 mt-6">
-        © {new Date().getFullYear()} Hệ Thống Quản Lý
-      </div>
     </div>
   );
 }
