@@ -5,6 +5,8 @@ export function middleware(request: NextRequest) {
   const userCookie = request.cookies.get("user");
   const path = request.nextUrl.pathname;
 
+  console.log({ userCookie, path });
+
   // Chưa đăng nhập
   if (!userCookie && (path.startsWith("/admin") || path.startsWith("/"))) {
     return NextResponse.redirect(new URL("/login", request.url));
